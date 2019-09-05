@@ -12,7 +12,6 @@ render() {
   return (
     <View>
       <App />
-
       <LabelEnv />
     </View>
   );
