@@ -1,5 +1,5 @@
 # react-native-env-label
-Label fro environments your apps
+Label for environments your apps
 
 ## Gettings Started
 ```
