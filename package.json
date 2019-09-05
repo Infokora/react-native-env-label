@@ -1,0 +1,29 @@
+{
+  "name": "react-native-env-label",
+  "version": "0.0.1",
+  "description": "Label for environments your apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Infokora/react-native-env-label.git"
+  },
+  "keywords": [
+    "env",
+    "environment",
+    "label-env",
+    "env-label",
+    "label-dev"
+  ],
+  "author": "Andrii Slotvinskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Infokora/react-native-env-label/issues"
+  },
+  "homepage": "https://github.com/Infokora/react-native-env-label#readme",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.56.0"
+  }
+}
