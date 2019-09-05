@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "react": "16.8.6",
-    "react-native": "0.60.5"
+    "react-native": "0.60.5",
+    "react-native-env-label": "file:../react-native-env-label-0.0.21.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

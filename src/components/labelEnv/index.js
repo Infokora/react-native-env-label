@@ -1,21 +1,34 @@
 import React from 'react';
 import {
   View,
-  Text
+  Text,
+  TouchableOpacity
 } from 'react-native';
 
 // STYLES
 import style from './style';
 
-export default class LabelEnv extends React.Component {
+type _t_props = {|
+  envName: string  
+|}
+export default class LabelEnv extends React.Component<_t_props> {
 
   render() {
+    const {
+      envName
+    } = this.props;
+
     return (
-      <View style={style.devLabel}>
-        <Text style={style.devLabelTxt}>
-          {"ENV"}
+      <TouchableOpacity style={style.devLabel}>
+        <Text
+          style={style.devLabelTxt}
+          accessibilityRole="button"
+          ellipsizeMode="tail"
+          numberOfLines={1}
+        >
+          {envName}
         </Text>
-      </View>
+      </TouchableOpacity>
     );
   }
 }
