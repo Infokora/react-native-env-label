@@ -4,7 +4,7 @@ export default StyleSheet.create({
   devLabel: {
     position: 'absolute',
     zIndex: 100,
-    top: Platform({ android: 15, ios: 30 }),
+    top: Platform.select({ android: 15, ios: 30 }),
     left: -1,
     maxWidth: 75,
     backgroundColor: "#42a5f4",
