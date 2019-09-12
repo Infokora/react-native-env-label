@@ -15,7 +15,7 @@ type _t_props = {|
 |}
 export default class LabelEnv extends React.Component<_t_props> {
 
-  positionX = new Animated.Value(-67);
+  positionX = new Animated.Value(-150);
 
   checkStylePosition = (flag) => {
     const {
@@ -32,7 +32,7 @@ export default class LabelEnv extends React.Component<_t_props> {
     }
   }
 
-  showLabel = () => {
+  showList = () => {
     Animated.timing(
       this.positionX,
         {
@@ -43,26 +43,20 @@ export default class LabelEnv extends React.Component<_t_props> {
     ).start();
   };
 
-  hideLabel = () => {
+  hideList = () => {
     Animated.timing(
       this.positionX,
       {
-        toValue: -65,
+        toValue: -150,
         duration: 300,
         easing: Easing.elastic(),
       }
     ).start();
   };
 
-  componentDidMount() {
-    this.showLabel();
-  }
-
   render() {
     const {
-      envName,
-      togglePositionLabel,
-      togglePositionBtnList
+      data,
     } = this.props;
 
     const animatedStyle = {
@@ -70,26 +64,29 @@ export default class LabelEnv extends React.Component<_t_props> {
     };
 
     return (
-      <Animated.View
-        style={[
-          style.devLabel,
-          animatedStyle
-        ]}
-      >
-        <TouchableOpacity
-          style={style.btnLabel}
-          onPress={togglePositionLabel}
-          onLongPress={togglePositionBtnList}
-        >
-          <Text
-            style={style.devLabelTxt}
-            accessibilityRole="button"
-            ellipsizeMode="tail"
-            numberOfLines={1}
-          >
-            {envName}
-          </Text>
-        </TouchableOpacity>
+      <Animated.View style={[
+        style.container,
+        animatedStyle
+      ]}>
+        {
+          data.map(({ txt, handler }, i) => (
+            <TouchableOpacity
+              key={`${txt}${i}`}
+              style={style.btn}
+              onPress={handler}
+            >
+              <Text
+                style={style.handlerTxt}
+                accessibilityRole="button"
+                ellipsizeMode="tail"
+                numberOfLines={1}
+              >
+                {txt}
+              </Text>
+            </TouchableOpacity>
+          ))
+        }
+        
       </Animated.View>
     );
   }

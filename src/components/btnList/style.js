@@ -6,26 +6,25 @@ import {
 import COLORS from '../../configs/assets/colors';
 
 export default StyleSheet.create({
-  devLabel: {
+  container: {
     position: 'absolute',
     zIndex: 100,
-    top: Platform.select({android: 15, ios: 35}),
+    top: Platform.select({android: 35, ios: 55}),
     left: -1,
-    width: 85,
-    backgroundColor: COLORS.blueberry,
-    borderBottomRightRadius: 5,
-    borderTopRightRadius: 5,
-    opacity: 0.7,
+    paddingTop: 20,
     elevation: 3,
   },
-  devLabelTxt: {
+  btn: {
+    padding: 10,
+    marginVertical: 5,
+    backgroundColor: COLORS.blueberry,
+    borderRadius: 5,
+    elevation: 3,
+  },
+  handlerTxt: {
     color: COLORS.white,
     fontSize: 12,
     textAlign: 'center',
     textShadowColor: COLORS.grayShadow,
-  },
-  btnLabel: {
-    paddingHorizontal: 10,
-    paddingVertical: 10,
   },
 });

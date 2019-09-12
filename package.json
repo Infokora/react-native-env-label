@@ -1,6 +1,6 @@
 {
   "name": "react-native-env-label",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Label for environments your apps",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Infokora/react-native-env-label#readme",
   "devDependencies": {
-    "metro-react-native-babel-preset": "^0.56.0"
+    "metro-react-native-babel-preset": "^0.56.0",
+    "flow-bin": "^0.106.3"
   }
 }

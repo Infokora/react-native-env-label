@@ -16,7 +16,7 @@ import {
   StatusBar,
 } from 'react-native';
 
-import LabelEnv from '../index.js';
+import LabelEnv from 'react-native-env-label';
 
 import {
   Header,
@@ -29,7 +29,10 @@ import {
 const App = () => {
   return (
     <Fragment>
-      <LabelEnv />
+
+      <LabelEnv envName={"Develop"} />
+
+
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
