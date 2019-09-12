@@ -15,7 +15,7 @@ type _t_props = {|
 |}
 export default class LabelEnv extends React.Component<_t_props> {
 
-  positionX = new Animated.Value(-1);
+  positionX = new Animated.Value(-150);
 
   checkStylePosition = (flag) => {
     const {

@@ -27,6 +27,5 @@ export default StyleSheet.create({
   btnLabel: {
     paddingHorizontal: 10,
     paddingVertical: 10,
-    borderWidth: 1,
   },
 });
