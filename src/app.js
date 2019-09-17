@@ -16,7 +16,6 @@ type _t_props = {|
 |}
 
 export default class App extends React.Component<_t_props> {
-
   labelShow = 'show';
 
   RefLabelEnv = null;
@@ -36,16 +35,26 @@ export default class App extends React.Component<_t_props> {
   };
 
   openDevMenu = () => {
-    NativeModules.DevMenu.show();
-  }
+    if (NativeModules.DevMenu) {
+      NativeModules.DevMenu.show();
+    } else {
+      NativeModules.DevSettings.reload();
+    }
+  };
+
+  clearConsole = () => {
+    console.clear();
+  };
 
   buttons = [{
-    txt: "Dev Menu",
+    txt: NativeModules.DevMenu ? "Dev Menu" : "Relaod",
     handler: this.openDevMenu
+  }, {
+    txt: "Clear Clear",
+    handler: this.clearConsole
   }];
 
   togglePositionLabel = () => {
-    console.log('HANDLER')
     if (this.labelShow === this.positionTypes.show) {
       this.labelShow = this.positionTypes.hide;
       this.RefBtnList.hideList();
@@ -66,7 +75,7 @@ export default class App extends React.Component<_t_props> {
     }
 
     this.btnListFlag = !this.btnListFlag;
-  }
+  };
 
   render() {
     const {

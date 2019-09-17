@@ -17,6 +17,12 @@ export default StyleSheet.create({
     borderTopRightRadius: 5,
     opacity: 0.7,
     elevation: 3,
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    shadowColor: COLORS.black,
+    shadowOpacity: 0.7,
   },
   devLabelTxt: {
     color: COLORS.white,

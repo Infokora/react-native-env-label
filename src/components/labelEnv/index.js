@@ -56,7 +56,7 @@ export default class LabelEnv extends React.Component<_t_props> {
 
   componentDidMount() {
     this.showLabel();
-  }
+  };
 
   render() {
     const {

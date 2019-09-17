@@ -13,6 +13,12 @@ export default StyleSheet.create({
     left: -1,
     paddingTop: 20,
     elevation: 3,
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    shadowColor: COLORS.black,
+    shadowOpacity: 0.7,
   },
   btn: {
     padding: 10,
