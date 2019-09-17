@@ -16,11 +16,22 @@ import LabelEnv from 'react-native-env-label';
 
 class App extends Component {
   render() {
+    const customButtons = [{
+      txt: "First Btn",
+      handler: () => alert("First")
+    }, {
+      txt: "Seccond Btn",
+      handler: () => alert("Seccond")
+    }];
+
     return (
       <Root>
         <App />
 
-        <LabelEnv />
+        <LabelEnv
+          envName="Env Name"
+          buttons={customButtons}
+        />
       </Root>
     );
   }
